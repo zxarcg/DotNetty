@@ -10,6 +10,8 @@ namespace Echo.Server
 
     public class EchoServerHandler : ChannelHandlerAdapter
     {
+        TestUserThread _bridget = new TestUserThread();
+
         public override void ChannelRead(IChannelHandlerContext context, object message)
         {
             var buffer = message as IByteBuffer;
